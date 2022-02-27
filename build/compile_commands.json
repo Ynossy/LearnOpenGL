@@ -1,0 +1,22 @@
+[
+{
+  "directory": "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/Triangle.dir/includes_C.rsp -g -o CMakeFiles\\Triangle.dir\\src\\empty_window.c.obj -c C:\\Users\\Adrian\\Documents\\Cpp\\opengl-Cmake\\src\\empty_window.c",
+  "file": "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/src/empty_window.c"
+},
+{
+  "directory": "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/Triangle.dir/includes_C.rsp -g -o CMakeFiles\\Triangle.dir\\src\\gl.c.obj -c C:\\Users\\Adrian\\Documents\\Cpp\\opengl-Cmake\\src\\gl.c",
+  "file": "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/src/gl.c"
+},
+{
+  "directory": "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/ColorTriangle_example.dir/includes_C.rsp -g -o CMakeFiles\\ColorTriangle_example.dir\\src\\color_triangle_example.c.obj -c C:\\Users\\Adrian\\Documents\\Cpp\\opengl-Cmake\\src\\color_triangle_example.c",
+  "file": "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/src/color_triangle_example.c"
+},
+{
+  "directory": "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/build",
+  "command": "C:\\PROGRA~1\\MINGW-~1\\X86_64~1.0-P\\mingw64\\bin\\X8EAA8~1.EXE  @CMakeFiles/ColorTriangle_example.dir/includes_C.rsp -g -o CMakeFiles\\ColorTriangle_example.dir\\src\\gl.c.obj -c C:\\Users\\Adrian\\Documents\\Cpp\\opengl-Cmake\\src\\gl.c",
+  "file": "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/src/gl.c"
+}
+]
