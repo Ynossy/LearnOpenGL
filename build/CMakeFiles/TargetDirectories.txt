@@ -1,4 +1,0 @@
-C:/Users/adria/Documents/Cpp/LearnOpenGL/build/CMakeFiles/Triangle.dir
-C:/Users/adria/Documents/Cpp/LearnOpenGL/build/CMakeFiles/ColorTriangle_example.dir
-C:/Users/adria/Documents/Cpp/LearnOpenGL/build/CMakeFiles/edit_cache.dir
-C:/Users/adria/Documents/Cpp/LearnOpenGL/build/CMakeFiles/rebuild_cache.dir
