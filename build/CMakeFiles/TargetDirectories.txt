@@ -1,4 +1,4 @@
-C:/Users/Adrian/Documents/Cpp/opengl-Cmake/build/CMakeFiles/Triangle.dir
-C:/Users/Adrian/Documents/Cpp/opengl-Cmake/build/CMakeFiles/ColorTriangle_example.dir
-C:/Users/Adrian/Documents/Cpp/opengl-Cmake/build/CMakeFiles/edit_cache.dir
-C:/Users/Adrian/Documents/Cpp/opengl-Cmake/build/CMakeFiles/rebuild_cache.dir
+C:/Users/adria/Documents/Cpp/LearnOpenGL/build/CMakeFiles/Triangle.dir
+C:/Users/adria/Documents/Cpp/LearnOpenGL/build/CMakeFiles/ColorTriangle_example.dir
+C:/Users/adria/Documents/Cpp/LearnOpenGL/build/CMakeFiles/edit_cache.dir
+C:/Users/adria/Documents/Cpp/LearnOpenGL/build/CMakeFiles/rebuild_cache.dir

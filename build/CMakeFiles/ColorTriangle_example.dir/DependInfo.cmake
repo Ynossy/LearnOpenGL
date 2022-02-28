@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/src/color_triangle_example.c" "CMakeFiles/ColorTriangle_example.dir/src/color_triangle_example.c.obj" "gcc" "CMakeFiles/ColorTriangle_example.dir/src/color_triangle_example.c.obj.d"
-  "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/src/gl.c" "CMakeFiles/ColorTriangle_example.dir/src/gl.c.obj" "gcc" "CMakeFiles/ColorTriangle_example.dir/src/gl.c.obj.d"
+  "C:/Users/adria/Documents/Cpp/LearnOpenGL/src/color_triangle_example.c" "CMakeFiles/ColorTriangle_example.dir/src/color_triangle_example.c.obj" "gcc" "CMakeFiles/ColorTriangle_example.dir/src/color_triangle_example.c.obj.d"
+  "C:/Users/adria/Documents/Cpp/LearnOpenGL/src/gl.c" "CMakeFiles/ColorTriangle_example.dir/src/gl.c.obj" "gcc" "CMakeFiles/ColorTriangle_example.dir/src/gl.c.obj.d"
   )
 
 # Targets to which this target links.

@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/src/empty_window.c" "CMakeFiles/Triangle.dir/src/empty_window.c.obj" "gcc" "CMakeFiles/Triangle.dir/src/empty_window.c.obj.d"
-  "C:/Users/Adrian/Documents/Cpp/opengl-Cmake/src/gl.c" "CMakeFiles/Triangle.dir/src/gl.c.obj" "gcc" "CMakeFiles/Triangle.dir/src/gl.c.obj.d"
+  "C:/Users/adria/Documents/Cpp/LearnOpenGL/src/empty_window.c" "CMakeFiles/Triangle.dir/src/empty_window.c.obj" "gcc" "CMakeFiles/Triangle.dir/src/empty_window.c.obj.d"
+  "C:/Users/adria/Documents/Cpp/LearnOpenGL/src/gl.c" "CMakeFiles/Triangle.dir/src/gl.c.obj" "gcc" "CMakeFiles/Triangle.dir/src/gl.c.obj.d"
   )
 
 # Targets to which this target links.

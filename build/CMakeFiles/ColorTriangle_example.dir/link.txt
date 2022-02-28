@@ -1,3 +1,3 @@
 "C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\ColorTriangle_example.dir/objects.a
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe qc CMakeFiles\ColorTriangle_example.dir/objects.a @CMakeFiles\ColorTriangle_example.dir\objects1.rsp
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\X8EAA8~1.EXE -g -Wl,--whole-archive CMakeFiles\ColorTriangle_example.dir/objects.a -Wl,--no-whole-archive -o ColorTriangle_example.exe -Wl,--out-implib,libColorTriangle_example.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ColorTriangle_example.dir\linklibs.rsp
+C:\PROGRA~1\MinGW\bin\ar.exe qc CMakeFiles\ColorTriangle_example.dir/objects.a @CMakeFiles\ColorTriangle_example.dir\objects1.rsp
+C:\PROGRA~1\MinGW\bin\X8EAA8~1.EXE -g -Wl,--whole-archive CMakeFiles\ColorTriangle_example.dir/objects.a -Wl,--no-whole-archive -o ColorTriangle_example.exe -Wl,--out-implib,libColorTriangle_example.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\ColorTriangle_example.dir\linklibs.rsp
