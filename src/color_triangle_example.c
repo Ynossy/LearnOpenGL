@@ -59,7 +59,7 @@ int main(void)
 
     if (!glfwInit())
         exit(EXIT_FAILURE);
-    
+
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
 
@@ -110,7 +110,7 @@ int main(void)
     {
         float ratio;
         int width, height;
-        mat4x4 m, p, mvp;
+        mat4x4 mx, mz, mxz, p, mvp;
 
         glfwGetFramebufferSize(window, &width, &height);
         ratio = width / (float)height;
@@ -118,10 +118,14 @@ int main(void)
         glViewport(0, 0, width, height);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        mat4x4_identity(m);
-        mat4x4_rotate_Z(m, m, (float)glfwGetTime());
+        mat4x4_identity(mx);
+        mat4x4_identity(mz);
+        mat4x4_identity(mxz);
+        mat4x4_rotate_X(mx, mx, (float)glfwGetTime());
+        mat4x4_rotate_Z(mz, mz, (float)glfwGetTime());
         mat4x4_ortho(p, -ratio, ratio, -1.f, 1.f, 1.f, -1.f);
-        mat4x4_mul(mvp, p, m);
+        mat4x4_mul(mxz, mx, mz);
+        mat4x4_mul(mvp, p, mxz);
 
         glUseProgram(program);
         glUniformMatrix4fv(mvp_location, 1, GL_FALSE, (const GLfloat *)mvp);
