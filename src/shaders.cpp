@@ -98,9 +98,9 @@ int main()
         // Draw Triangle(s)
         ourShader.use();
 
-        float timeValue = glfwGetTime();
-        float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
-        ourShader.setFloat4("ourColor", greenValue);
+        // float timeValue = glfwGetTime();
+        // float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
+        // ourShader.setFloat4("ourColor", greenValue);
         // int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
         // glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f); // set color of uniform var ourColor
 
