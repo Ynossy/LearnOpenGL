@@ -4,6 +4,7 @@
 #include <glad/gl.h>
 #include <GLFW/glfw3.h>
 #include <math.h>
+#include "shader_s.h"
 
 #include <stdio.h>
 
@@ -18,29 +19,6 @@ unsigned int indices[] = {
     0, 1, 3, // first triangle
     1, 2, 3  // second triangle
 };
-
-// Vertex Shader
-const char *vertexShaderSource = "#version 330 core\n"
-                                 "layout (location = 0) in vec3 aPos;\n"
-                                 "layout (location = 1) in vec3 aColor;\n"
-
-                                 "out vec3 ourColor;\n" // output to the Fragmet Shader
-                                 "void main()\n"
-                                 "{\n"
-                                 "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-                                 "   ourColor = aColor;\n"
-                                 "}\0";
-
-// Fragment Shader
-const char *fragmentShaderSource =
-    "#version 330 core\n"
-    "out vec4 FragColor;\n"
-    "in vec3 ourColor;\n" // global variable
-    "\n"
-    "void main()\n"
-    "{\n"
-    "    FragColor = vec4(ourColor, 1.0);\n"
-    "}\n";
 
 void framebuffer_size_callback(GLFWwindow *window, int width, int height)
 {
@@ -78,51 +56,7 @@ int main()
     glViewport(0, 0, 800, 600);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
-    // Vertex Shader
-    unsigned int vertexShader;
-    vertexShader = glCreateShader(GL_VERTEX_SHADER);
-    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL);
-    glCompileShader(vertexShader);
-    // check compilation
-    int success;
-    char infoLog[512];
-    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-    if (!success)
-    {
-        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-        printf("Vertexshader failed:\n %s", infoLog);
-    }
-
-    // fragment Shader
-    unsigned int fragmentShader;
-    fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-    glCompileShader(fragmentShader);
-    // check compilation
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-    if (!success)
-    {
-        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-        printf("Vertexshader failed:\n %s", infoLog);
-    }
-
-    // Link to program
-    unsigned int shaderProgram;
-    shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-    // check compilation
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-    if (!success)
-    {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-        printf("Shader Program failed:\n %s", infoLog);
-    }
-
-    glUseProgram(shaderProgram);
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
+    Shader ourShader("../src/shaders/vertexShader.glsl", "../src/shaders/fragmentShader.glsl");
 
     // Vertex setup
     unsigned int VBO, VAO, EBO; // Vertex Buffer Object, Vertex Array Object, Element buffer objects
@@ -162,12 +96,13 @@ int main()
         glClear(GL_COLOR_BUFFER_BIT);
 
         // Draw Triangle(s)
-        glUseProgram(shaderProgram);
+        ourShader.use();
 
         float timeValue = glfwGetTime();
         float greenValue = (sin(timeValue) / 2.0f) + 0.5f;
-        int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
-        glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f); // set color of uniform var ourColor
+        ourShader.setFloat("ourColor", greenValue);
+        // int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
+        // glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f); // set color of uniform var ourColor
 
         glBindVertexArray(VAO);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
@@ -181,7 +116,6 @@ int main()
     // optional: de-allocate all resources once they've outlived their purpose:
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
-    glDeleteProgram(shaderProgram);
 
     glfwTerminate();
     return 0;
