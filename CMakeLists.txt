@@ -13,5 +13,8 @@ target_link_libraries(Triangle glfw3) # link to library (undefined calls when no
 add_executable(ColorTriangle_example src/color_triangle_example.c src/gl.c)
 target_link_libraries(ColorTriangle_example glfw3) # link to library (undefined calls when not linked correctly)
 
-add_executable(Shaders src/shaders.cpp src/gl.c src/shader_s.h)
+add_executable(Shaders src/shaders.cpp src/gl.c)
 target_link_libraries(Shaders glfw3) # link to library (undefined calls when not linked correctly)
+
+add_executable(Textures src/textures.cpp src/gl.c)
+target_link_libraries(Textures glfw3) # link to library (undefined calls when not linked correctly)
