@@ -6,7 +6,7 @@ find_package(OpenGL REQUIRED)
 include_directories(include)
 link_directories(bin)
 
-add_executable(Triangle src/empty_window.c src/gl.c)
+add_executable(Triangle src/basic_shape.c src/gl.c)
 # link to glfw3 instead of glfw3dll to avoid needing glfw3.dll in the same folder
 target_link_libraries(Triangle glfw3) # link to library (undefined calls when not linked correctly)
 
