@@ -30,3 +30,6 @@ target_link_libraries(Textures glfw3) # link to library (undefined calls when no
 
 add_executable(Transformations src/transformations.cpp src/gl.c)
 target_link_libraries(Transformations glfw3 glm) # link to library (undefined calls when not linked correctly)
+
+add_executable(Coordinate-Systems src/coordinate-systems.cpp src/gl.c)
+target_link_libraries(Coordinate-Systems glfw3 glm) # link to library (undefined calls when not linked correctly)
