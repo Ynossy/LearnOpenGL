@@ -19,9 +19,9 @@ class Camera
 public:
     float pitch = 0;
     float yaw = 0;
-    float lastX = 400, lastY = 300;
-    float fov = 60.0f;
+    float lastX, lastY;
     bool firstMouse = true;
+    float fov = 60.0f;
 
     glm::vec3 cameraPos;
     glm::vec3 cameraFront;
